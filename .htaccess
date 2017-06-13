@@ -1,0 +1,14 @@
+DirectoryIndex index.php
+
+<Files ~ "^[^\.]+$">
+ForceType x-mapp-php5
+</Files>
+<Files ~ "^[^\.]+\.php$">
+ForceType x-mapp-php5
+</Files>
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^((.)*\.(jpg|png|css|js|woff|woff2|ttf|svg|eot|ico|pdf|csv|asc|gif))$ $1 [NC,L]
+RewriteRule ^(.)*$ /le_parchemin/_404.php [NC,L]
